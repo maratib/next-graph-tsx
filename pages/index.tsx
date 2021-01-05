@@ -7,6 +7,7 @@ import {
 } from '../lib/schemas/viewer.graphql'
 import { initializeApollo } from '../lib/apollo'
 import Greeting from '../components/theme/Greeting'
+import Layout from '../components/layouts/Layout'
 
 const Index = () => {
   const { viewer } = useViewerQuery().data!
@@ -42,7 +43,7 @@ const Index = () => {
   }
 
   return (
-    <div>
+    <Layout title="Home | Next.js + TypeScript Example">
       You're signed in as {viewer.name} and you're {viewer.status}. Go to the{' '}
       <Link href="/about">
         <a>about</a>
@@ -57,7 +58,7 @@ const Index = () => {
         <input type="button" value="change" onClick={onChangeName} />
       </div>
       <Greeting name="Maratib" />
-    </div>
+    </Layout>
   )
 }
 

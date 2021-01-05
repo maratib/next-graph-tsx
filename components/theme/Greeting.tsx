@@ -8,12 +8,12 @@ const Greeting = ({ name }: GreetingProps) => (
     <h1>Hello {name} </h1>
     <Button color="primary" variant="contained">
       Click Me
-      </Button>
+    </Button>
     <br />
     <br />
     <Button startIcon={<LoginIcon />} color="primary" variant="contained">
       Login
-      </Button>
+    </Button>
   </div>
 );
 export default Greeting;
